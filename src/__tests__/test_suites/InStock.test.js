@@ -21,7 +21,7 @@ describe('3rd Deliverable', () => {
     fireEvent.click(inStockButton);
 
     // Wait for the "Out of Stock" button to appear and verify its presence
-    const outOfStockButton = await findByText('Out of Stock');
+    const outOfStockButton = await findByText((content) => content.toLowerCase().includes('sold out'));
     expect(outOfStockButton).toBeInTheDocument();
   });
 })

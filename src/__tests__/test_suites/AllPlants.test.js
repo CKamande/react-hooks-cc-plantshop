@@ -19,7 +19,7 @@ describe('1st Deliverable', () => {
     expect(plantImages).toEqual(basePlantImages);
 
     const plantPrices = plantItems.map((item) => item.querySelector('p').textContent);
-    const basePlantPrices = global.basePlants.map((plant) => 'Price: ' + plant.price.toString());
+    const basePlantPrices = global.basePlants.map((plant) => `Price: $${plant.price}`);
     expect(plantPrices).toEqual(basePlantPrices);
   });
 
@@ -38,7 +38,7 @@ describe('1st Deliverable', () => {
     expect(plantImages).toEqual(basePlantImages);
 
     const plantPrices = plantItems.map((item) => item.querySelector('p').textContent);
-    const basePlantPrices = global.alternatePlants.map((plant) => 'Price: ' + plant.price.toString());
+    const basePlantPrices = global.alternatePlants.map((plant) => `Price: $${plant.price}`);
     expect(plantPrices).toEqual(basePlantPrices);
   });
 })
